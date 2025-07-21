@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Charts</title>
+    <style>
+        body {
+            background-image: url('/static/te.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: inherit;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        h1, h2, h3 {
+            font-size: larger;
+            font-style: inherit;
+            color: rgb(1, 50, 50);
+            margin-top: 40px;
+        }
+
+        img {
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #555;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+        }
+        a.button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+             background-color: rgb(30, 62, 62);
+  color: rgb(118, 194, 194);
+text-decoration: none;
+            border-radius: 18px;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Total Predictions by VotingClassifier (All Users)</h2>
+    <img src="{{ url_for('static', filename='graphs/prediction_count_chart.png') }}" alt="Prediction Count Chart" width="500">
+
+    <h2>Model Accuracy Comparison</h2>
+    <img src="{{ url_for('static', filename='graphs/accuracy_chart.png') }}" alt="Accuracy Chart" width="600">
+<a class="button" href="/home">Go Home</a>
+</body>
+</html>

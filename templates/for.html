@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forgot Password</title>
+  <style>
+    body {
+      background-image: url('static/te.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    form {
+      width: 400px;
+height: 300px;
+margin: 100px;
+      padding: 40px 20px;
+      border-radius: 50px;
+      background-color: rgb(118, 194, 194);
+border: none;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: xx-large;
+margin-top: 0;
+
+font-style: inherit;
+color: rgb(13, 66, 66);
+    }
+
+    p {
+      color: rgb(13,66,66);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+    color: rgb(1, 39, 39);
+      text-align: left;
+      margin-bottom: 8px;
+      margin-left: 50px;
+    }
+
+    input[type="email"]{
+      width: 280px;
+      padding: 10px;
+      border: none;
+      border-radius: 50px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+  background-color: rgb(13,66,66);
+
+          color: rgb(118, 194, 194);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    p a {
+ color: rgb(13,66,66);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body><center>
+
+  <form>
+    <h2>Forgot your password</h2>
+    <p>Please enter the email address you'd like your password reset information sent to</p>
+    <label for="email">Enter email address</label>
+    <input type="email" id="email" name="email" placeholder="enter your email" required>
+    <br>
+
+    <button type="submit">Request reset link</button>
+
+    <p><a href="/">Back To Login</a></p>
+  </form>
+</center>
+</body>
+</html>

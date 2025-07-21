@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>home Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+
+    body {
+      background-image: url('static/te.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      background-color: rgb(118, 194, 194);
+      padding: 30px;
+      border-radius: 30px;
+      width: 350px;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      grid-column: 1 / 3;
+      font-size: x-large;
+      color: rgb(13, 66, 66);
+      margin-bottom: 10px;
+    }
+button {
+  width: 120px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgba(13, 66, 66);
+  color: rgb(118, 194, 194);
+  font-size: medium;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(10, 50, 50);
+}
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(118,194,194);
+    background-color: rgb(10, 50, 50);
+    padding: 8px 12px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: rgb(21, 106, 106);
+}
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Welcome to the Heart Disease detection system</h1>
+
+    <button type="button" onclick="location.href='/fileup'">test file</button>
+    <button type="button" onclick="location.href='/predict'">predict data</button>
+    <button type="button" onclick="location.href='/performance'">performance analysis</button>
+    <button type="button" onclick="location.href='/chart'">chart</button> 
+    <button type="button" class="full-width" onclick="location.href='/my-predictions'">view all user</button>
+    <a href="/logout" class="logout-btn">🔙logout</a>
+  </form>
+</body>
+</html>

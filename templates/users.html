@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Predictions</title>
+     <style>
+        body{
+            background-image: url('static/te.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+     h2{
+      font-size: xx-large;
+      font-style: inherit;
+      color:rgb(1, 39, 39);
+      text-align: center;
+      margin-bottom: 20px;
+    }    
+        a.button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+             background-color: rgb(30, 62, 62);
+  color: rgb(118, 194, 194);
+text-decoration: none;
+            border-radius: 18px;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }table {
+    border-collapse: collapse;
+    width: 90%;
+    
+    font-family: inherit;
+    font-size: 16px;
+}
+
+th, td {
+    padding: 12px 20px; /* spacing inside cells */
+    text-align: center;
+    border: 2px solid rgb(1, 57, 57);
+}
+
+th {
+    background-color: rgb(118, 194, 194);
+    color: rgb(30, 62, 62);
+}
+tr:hover {
+    background-color: rgb(118, 194, 194);
+}
+
+</style>
+</head>
+<body><center>
+    <h2>My Manual Predictions</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Input Data</th>
+            <th>Prediction Result</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for row in predictions %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.input_data }}</td>
+            <td>{{ row.prediction_result }}</td>
+            <td>{{ row.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a class="button" href="/home">Back to Home</a>
+</center></body>
+</html>

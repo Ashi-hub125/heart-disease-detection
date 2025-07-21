@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performance Analysis</title>
+    <style>
+        body {
+            background-image: url("/static/te.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-style: inherit;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            
+            display: inline-block;
+            padding: 30px 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+            border-radius: 50px;
+      background-color: rgb(118, 194, 194);
+border: none;
+        }
+
+        h2 {
+            
+font-style: inherit;
+color: rgb(13, 66, 66);
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        img {
+            width: 500px;
+            border-radius: 10px;
+            margin-top: 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        a.button {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 10px 20px;
+             background-color: rgb(30, 62, 62);
+  color: rgb(118, 194, 194);
+text-decoration: none;
+            border-radius: 18px;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Performance Analysis for {{ username }}</h2>
+
+        <p><strong>Accuracy:</strong> {{ accuracy }}%</p>
+        <p><strong>Precision:</strong> {{ precision }}%</p>
+        <p><strong>Recall:</strong> {{ recall }}%</p>
+        <p><strong>F1-Score:</strong> {{ f1 }}%</p>
+
+        <h2>Confusion Matrix</h2>
+        <img src="/{{ chart_path }}" alt="Confusion Matrix">
+
+        <br><br>
+        <a class="button" href="/home">Go Home</a>
+    </div>
+</body>
+</html>

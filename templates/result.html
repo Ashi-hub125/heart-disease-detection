@@ -1,0 +1,62 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url('/static/te.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-style: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            background-color: rgb(118, 194, 194);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px gray;
+        }
+        h2 {
+            color: #333;
+            font-size: 28px;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #222;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+  background-color: rgb(30, 62, 62);
+  color: rgb(118, 194, 194);
+            border-radius: 25px;
+            text-decoration: none;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Prediction Result</h2>
+        <p>The predicted risk is: <strong>{{ risk_text }}</strong></p>
+
+        <a class="button" href="/home">Go Home</a>
+    </div>
+</body>
+</html>
